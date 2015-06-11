@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+while true; do
+  x=$(curl -s https://ianthehenry.com/interrupt/)
+  if [[ "$x" = "yes" ]]; then
+    curl -X POST https://ianthehenry.com/interrupt/
+    open "https://appear.in/interruption"
+  fi
+  sleep 1
+done

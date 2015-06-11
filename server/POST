@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+if [ -e ./annoy ]; then
+  rm ./annoy
+else
+  touch ./annoy
+fi
+
+http-status 204
+http-date
+http-begin-body

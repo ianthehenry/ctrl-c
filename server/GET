@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+text=""
+
+if [ -e ./annoy ]; then
+  text="yes"
+fi
+printf "%s" "$text" | http-response "text/plain; charset=utf-8"
